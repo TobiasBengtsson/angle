@@ -12,11 +12,10 @@ Portability :  portable
 {-# LANGUAGE UnicodeSyntax #-}
 
 module Data.Angle
-    (
-      Angle, radians, degrees
+    ( Angle, radians, degrees
+    , getRadians, getDegrees
     , (∠+∠), (∠-∠), (∠*), (∠/), (∠/∠)
     , normalizeAngle
-    , getRadians, getDegrees
     , sine, cosine, tangent
     , arcsine, arccosine, arctangent
     ) where
@@ -37,6 +36,14 @@ radians = Angle
 
 degrees :: Floating a => a -> Angle a
 degrees = Angle . (* π2) . (/ 360)
+
+-- |Returns an angle as radians.
+getRadians :: Floating a => Angle a -> a
+getRadians = getAngle
+
+-- |Returns an angle as degrees.
+getDegrees :: Floating a => Angle a -> a
+getDegrees = (* 360) . (/ π2) . getAngle
 
 -- |Adds two angles.
 (∠+∠) :: (Floating a) => Angle a → Angle a → Angle a
@@ -61,14 +68,6 @@ degrees = Angle . (* π2) . (/ 360)
 -- |Normalizes an angle to between 0 and 2π rad.
 normalizeAngle :: (Floating a, Real a) => Angle a → Angle a
 normalizeAngle (Angle α) = Angle (α `mod'` π2)
-
--- |Returns an angle as radians.
-getRadians :: Floating a => Angle a -> a
-getRadians = getAngle
-
--- |Returns an angle as degrees.
-getDegrees :: Floating a => Angle a -> a
-getDegrees = (* 360) . (/ π2) . getAngle
 
 -- |Calculates the sine of an angle.
 sine :: (Floating a) => Angle a → a

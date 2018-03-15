@@ -16,6 +16,16 @@ Create an angle from degrees:
 
 `degrees 180`
 
+## Get an angle as a number
+
+Get an angle in radians
+
+`getRadians angle`
+
+Get an angle in degrees
+
+`getDegrees angle`
+
 ## Perform arithmetic operations on angles
 
 Add two angles
@@ -54,12 +64,8 @@ Inverses gives an angle given a number:
 
 `arctangent x`
 
-## Get an angle as a number
+## Perform other operations with angles
 
-Get an angle in radians
+Normalize an angle to between 0 and 2*pi radians:
 
-`getRadians angle`
-
-Get an angle in degrees
-
-`getDegrees angle`
+`normalizeAngle angle`
