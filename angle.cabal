@@ -1,5 +1,5 @@
 name:                angle
-version:             0.1.0.0
+version:             1.0.0.0
 synopsis:            Library for calculating with angles in a type-safe manner.
 description:         Library for calculating with angles in a type-safe manner.
 homepage:            https://github.com/TobiasBengtsson/angle
@@ -32,7 +32,7 @@ test-suite angle-test
   build-depends:
       angle
     , base >=4.7 && <5
-    , random
-    , tasty
-    , tasty-quickcheck
+    , random ==1.1
+    , tasty ==0.11.3
+    , tasty-quickcheck ==0.8.4
   default-language: Haskell2010

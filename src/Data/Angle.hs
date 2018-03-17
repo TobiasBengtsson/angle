@@ -31,9 +31,11 @@ import Data.Fixed (mod')
 newtype Angle a = Angle { getAngle :: a }
   deriving (Show, Eq)
 
+-- |Create an angle from radians.
 radians :: Floating a => a -> Angle a
 radians = Angle
 
+-- |Create an angle from degrees.
 degrees :: Floating a => a -> Angle a
 degrees = Angle . (* π2) . (/ 360)
 
