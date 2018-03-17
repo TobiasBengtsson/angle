@@ -1,7 +1,18 @@
 name:                angle
 version:             1.0.0.0
 synopsis:            Library for calculating with angles in a type-safe manner.
-description:         Library for calculating with angles in a type-safe manner.
+description:         Angle is a library for calculating with angles in a
+                     type-safe manner. The difference between this library
+                     and other libraries dealing with angles is that here
+                     they are treated in a representation-independent manner
+                     from the outside. You can create an angle from any
+                     representation you want (degrees, radians currently
+                     supported) and perform operations on those angles. You
+                     can perform binary operations on angles created from
+                     different representations and it will still build and
+                     work. Finally, when you want to get the angle in a
+                     representation of your choice you can call getDegrees
+                     or getRadians.
 homepage:            https://github.com/TobiasBengtsson/angle
 license:             BSD3
 license-file:        LICENSE
