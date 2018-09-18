@@ -2,11 +2,21 @@
 
 Allows you to calculate with angles in a type-safe manner in Haskell.
 
+## Build
+
+`stack build`
+
+## Run Tests
+
+`stack test`
+
 ## Import
 
 `import Data.Angle`
 
-## Create an angle
+## API
+
+### Create an angle
 
 Create an angle from radians:
 
@@ -16,7 +26,7 @@ Create an angle from degrees:
 
 `degrees 180`
 
-## Get an angle as a number
+### Get an angle as a number
 
 Get an angle in radians
 
@@ -26,7 +36,7 @@ Get an angle in degrees
 
 `getDegrees angle`
 
-## Perform arithmetic operations on angles
+### Perform arithmetic operations on angles
 
 Add two angles
 
@@ -48,7 +58,7 @@ Divide two angles (and get a number)
 
 `angle1 ∠/∠ angle2`
 
-## Perform trigonometric operations with angles
+### Perform trigonometric operations with angles
 
 `sine angle`
 
@@ -64,7 +74,7 @@ Inverses gives an angle given a number:
 
 `arctangent x`
 
-## Perform other operations with angles
+### Perform other operations with angles
 
 Normalize an angle to between 0 and 2*pi radians:
 
